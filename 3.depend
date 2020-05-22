@@ -12,11 +12,11 @@
 	"histogram.h"
 	"for_svg.h"
 
-1590180419 c:\users\pc\desktop\lab-03\3\for_svg.h
+1590181487 c:\users\pc\desktop\lab-03\3\for_svg.h
 	<vector>
 	<string>
 
-1590180444 source:c:\users\pc\desktop\lab-03\3\for_svg.cpp
+1590182965 source:c:\users\pc\desktop\lab-03\3\for_svg.cpp
 	"for_svg.h"
 	<iostream>
 
