@@ -6,8 +6,7 @@
 1590179262 c:\users\pc\desktop\lab-03\3\histogram.h
 	<vector>
 
-1590179273 source:c:\users\pc\desktop\lab-03\3\main.cpp
-	<iostream>
-	<vector>
+1590179788 source:c:\users\pc\desktop\lab-03\3\test.cpp
 	"histogram.h"
+	<cassert>
 
