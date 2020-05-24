@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <windows.h>
-#include <sstream>
 #include "histogram.h"
 #include "for_svg.h"
 
@@ -16,29 +12,6 @@ vector<double> input_numbers(size_t count)
     }
     return result;
 }
-
-string GetInfoText()
-{
-    stringstream buffer;
-    DWORD info = GetVersion();
-    DWORD platform = info >> 16;
-    DWORD mask = 0x0000ffff;
-    DWORD version = info & mask;
-    DWORD mask_major = 0x000000ff;
-    DWORD version_major = version & mask_major;
-    DWORD version_minor = version >> 8;
-    buffer << "Windows v" << version_major << "." << version_minor;
-    if ((info & 0x40000000) == 0) {
-        DWORD build = platform;
-        buffer << "(build " << build << ")\n";
-    }
-    char computer_name[MAX_COMPUTERNAME_LENGTH + 1];
-    DWORD size = sizeof(computer_name);
-    GetComputerNameA(computer_name, &size);
-    buffer << "Name: " << computer_name << "\n";
-    return buffer.str();
-}
-
 
 int main()
 {
