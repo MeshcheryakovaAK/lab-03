@@ -20,3 +20,66 @@
 	"for_svg.h"
 	<iostream>
 
+1590315551 source:d:\documents\mpei\development\lab03s\lab03\lab-03\for_svg.cpp
+	"for_svg.h"
+	<iostream>
+
+1590315551 d:\documents\mpei\development\lab03s\lab03\lab-03\for_svg.h
+	<vector>
+	<string>
+
+1590320868 source:d:\documents\mpei\development\lab03s\lab03\lab-03\histogram.cpp
+	"histogram.h"
+	<iostream>
+
+1590320868 d:\documents\mpei\development\lab03s\lab03\lab-03\histogram.h
+	<vector>
+
+1590324817 source:d:\documents\mpei\development\lab03s\lab03\lab-03\main.cpp
+	<iostream>
+	<vector>
+	<curl/curl.h>
+	<sstream>
+	<string>
+	"histogram.h"
+	"for_svg.h"
+
+1587991348 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<osreldate.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<support/SupportDefs.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"typecheck-gcc.h"
+
+1588129392 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\curlver.h
+
+1587548874 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\system.h
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1587548874 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\easy.h
+
+1587548874 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\multi.h
+	"curl.h"
+
+1587548874 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\urlapi.h
+	"curl.h"
+
+1587548874 d:\documents\mpei\development\lab03s\lab03\lab-03\curl\include\curl\typecheck-gcc.h
+
