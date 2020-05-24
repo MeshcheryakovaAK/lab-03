@@ -65,6 +65,8 @@ Input download(const string& address)
             cerr << curl_easy_strerror(res) << endl;
             exit(1);
         }
+        curl_version_info_data* data = curl_version_info(CURLVERSION_NOW);
+        cerr << data->version << endl << data->ssl_version << endl;
         curl_easy_cleanup(curl);
     }
     return read_input(buffer, false);
