@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
+#include <windows.h>
 #include "histogram.h"
 #include "for_svg.h"
+
 using namespace std;
 
 vector<double> input_numbers(size_t count)
@@ -15,6 +17,9 @@ vector<double> input_numbers(size_t count)
 }
 int main()
 {
+    printf("GetVersion() is %u.\n", GetVersion());
+    printf("GetVersion() is %x.\n", GetVersion());
+    return 0;
 
     size_t number_count;
     cerr << "Enter number count: ";
