@@ -17,8 +17,10 @@ vector<double> input_numbers(size_t count)
 }
 int main()
 {
-    printf("GetVersion() is %u.\n", GetVersion());
-    printf("GetVersion() is %x.\n", GetVersion());
+    DWORD mask = 0b00000000'00000000'11111111'11111111;
+    DWORD info = GetVersion();
+    DWORD version = info & mask;
+    printf("Unmasked version is %u.\n", version);
     return 0;
 
     size_t number_count;
