@@ -26,6 +26,10 @@ int main()
     DWORD version_minor = version >> 8;
     printf("Major version is %u.\n", version_major);
     printf("Minor version is %u.\n", version_minor);
+    if ((info & 0x40000000) == 0) {
+        DWORD build = platform;
+        printf("Build is %u.\n", build);
+    }
     return 0;
 
     size_t number_count;
