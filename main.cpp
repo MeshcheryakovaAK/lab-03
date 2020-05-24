@@ -30,6 +30,11 @@ int main()
         DWORD build = platform;
         printf("Build is %u.\n", build);
     }
+    char computer_name[MAX_COMPUTERNAME_LENGTH + 1];
+    DWORD size = sizeof(computer_name);
+    GetComputerNameA(computer_name, &size);
+    printf("Computer Name: %s", computer_name);
+
     return 0;
 
     size_t number_count;
