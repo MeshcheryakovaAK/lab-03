@@ -35,6 +35,8 @@ string GetInfoText()
     return buffer.str();
 }
 
+
+
 void svg_begin(double width, double height)
 {
     cout << "<?xml version='1.0' encoding='UTF-8'?>\n";
@@ -58,8 +60,8 @@ void svg_rect(double x, double y, double width, double height, string stroke = "
 void svg_text(double left, double baseline, string text)
 {
     cout << "<text x='" << left << "' y='"<<baseline<<"'>"<<text<<"</text>";
-
 }
+
 void show_histogram_svg(const vector<size_t>& bins)
 {
     const size_t screen_width=80;
@@ -67,7 +69,7 @@ void show_histogram_svg(const vector<size_t>& bins)
     int BLOCK_WIDTH=variant_9(); //comment for lab3
     const auto IMAGE_WIDTH=400*BLOCK_WIDTH/10; //comment for lab3
     //const auto IMAGE_WIDTH = 400; //comment for variant 9
-    const auto IMAGE_HEIGHT = 300;
+    const auto IMAGE_HEIGHT = 400;
     const auto TEXT_LEFT = 20;
     const auto TEXT_BASELINE = 20;
     const auto TEXT_WIDTH = 50;
@@ -94,22 +96,24 @@ void show_histogram_svg(const vector<size_t>& bins)
         const double scaling_multiplier = (double)width / max_count;
         if(max_count*BLOCK_WIDTH/GRAPH_WIDTH>1)
         {
+            svg_text(TEXT_LEFT, TEXT_BASELINE, GetInfoText());
             for (size_t bin : bins)
             {
                 const double new_scaling_multiplier=(double)GRAPH_WIDTH/(max_count*BLOCK_WIDTH*scaling_multiplier);
                 const size_t new_bin_width = (size_t)BLOCK_WIDTH*bin*scaling_multiplier*new_scaling_multiplier;
-                svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin));
-                svg_rect(TEXT_WIDTH, top, new_bin_width, BIN_HEIGHT,stroke,fill);
+                svg_text(TEXT_LEFT, top + TEXT_BASELINE * 3, to_string(bin));
+                svg_rect(TEXT_WIDTH, top + TEXT_BASELINE * 2, new_bin_width, BIN_HEIGHT,stroke,fill);
                 top += BIN_HEIGHT;
             }
         }
         else
         {
+            svg_text(TEXT_LEFT, TEXT_BASELINE, GetInfoText());
             for (size_t bin : bins)
             {
                 const double bin_width = BLOCK_WIDTH*bin*scaling_multiplier;
-                svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin));
-                svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
+                svg_text(TEXT_LEFT, top + TEXT_BASELINE * 3, to_string(bin));
+                svg_rect(TEXT_WIDTH, top + TEXT_BASELINE * 2, bin_width, BIN_HEIGHT,stroke,fill);
                 top += BIN_HEIGHT;
             }
         }
@@ -119,22 +123,24 @@ void show_histogram_svg(const vector<size_t>& bins)
     {
         if(max_count*BLOCK_WIDTH/GRAPH_WIDTH>1)
         {
+            svg_text(TEXT_LEFT, TEXT_BASELINE, GetInfoText());
             for (size_t bin : bins)
             {
                 const double new_scaling_multiplier=(double)GRAPH_WIDTH/(max_count*BLOCK_WIDTH);
                 const size_t new_bin_width = (size_t)BLOCK_WIDTH*bin*new_scaling_multiplier;
-                svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin));
-                svg_rect(TEXT_WIDTH, top, new_bin_width, BIN_HEIGHT,stroke,fill);
+                svg_text(TEXT_LEFT, top + TEXT_BASELINE * 3, to_string(bin));
+                svg_rect(TEXT_WIDTH, top + TEXT_BASELINE * 2, new_bin_width, BIN_HEIGHT,stroke,fill);
                 top += BIN_HEIGHT;
             }
         }
         else
         {
+            svg_text(TEXT_LEFT, TEXT_BASELINE, GetInfoText());
             for (size_t bin : bins)
             {
                 const double bin_width = BLOCK_WIDTH * bin;
-                svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin));
-                svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
+                svg_text(TEXT_LEFT, top + TEXT_BASELINE * 3, to_string(bin));
+                svg_rect(TEXT_WIDTH, top + TEXT_BASELINE * 2, bin_width, BIN_HEIGHT,stroke,fill);
                 top += BIN_HEIGHT;
             }
         }
